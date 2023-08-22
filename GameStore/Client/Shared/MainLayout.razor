@@ -1,0 +1,21 @@
+﻿@using GameStore.Shared.Cascade;
+@inherits LayoutComponentBase
+
+<div>
+    <header>
+        <NavMenu/>
+    </header>
+    <main>
+        <CascadingValue Value="@id">
+            @Body
+        </CascadingValue>
+    </main>
+    <footer>
+        <Footer/>
+    </footer>
+</div>
+
+@code
+{
+    private CascadeValue id= new();
+}
